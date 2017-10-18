@@ -1,18 +1,15 @@
-package com.example.activemq.configuration;
+package com.example.activemq.inventory.config;
 
 import org.apache.activemq.spring.ActiveMQConnectionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jms.annotation.EnableJms;
-import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.core.JmsTemplate;
 
 import java.util.Arrays;
 
 @Configuration
 public class MessagingConfig {
-    //private static final String DEFAULT_BROKER_URL = "tcp://localhost:61616";
-    private static final String ORDER_QUEUE = "order-queue";
+    private static final String ORDER_QUEUE = "order-response-queue";
 
     @Bean
     public ActiveMQConnectionFactory connectionFactory(){
